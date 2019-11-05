@@ -1,0 +1,16 @@
+num = 27; 
+
+convertToWord(num){
+    String returnVal = "";
+    if(num < 30 && num < 20){
+        returnVal += "twenty";
+        returnVal + " " + oneToNineteen(num - 20); 
+    }
+}
+
+private static String oneToNineteen(int x){
+    
+}
+
+27 / 10 * 10 -- trick 
+
