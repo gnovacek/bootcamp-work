@@ -1,0 +1,101 @@
+:root {
+    --blue: #00adee;
+    --grey: #505355;
+}
+  
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+   background-color: rgba(192, 192, 192, 0.1); 
+   color: var(--grey); 
+   margin: 0 8% 0 8%; 
+  }
+
+  #student-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "student-quote student-quote student-picture"
+        "student-profile student-profile student-contact"
+        "experience experience experience";
+
+   grid-column-gap: 20px;
+   grid-row-gap: 50px; 
+  }
+
+  #student-quote {
+    grid-area: student-quote;
+    line-height: 50px; 
+    font-size: 22px;
+  }
+
+  #student-picture {
+    grid-area: student-picture;
+  }
+
+  #student-profile {
+    grid-area: student-profile;
+  }
+
+  #student-contact {
+    grid-area: student-contact;
+  }
+
+  #experience {
+    grid-area: experience; 
+    display: flex; 
+    justify-content: center;
+    justify-items: left; 
+    align-items: center; 
+    flex-wrap: wrap;
+  }
+
+  #experience > div {
+    width: 30%;
+    padding-left: 10px; 
+  }
+
+ div h3 {
+     color: var(--blue);  
+ }
+
+ header {
+    padding-top: 10px; 
+ }
+
+ header img {
+     width: 25%; 
+ }
+
+ #student-picture img {
+    border-radius: 100%; 
+ }
+
+ .headline {
+     font-size: 72px; 
+     margin: 0;
+     padding-bottom: 100px;  
+ }
+
+ #student-contact p {
+     text-align: center; 
+     font-style: italic; 
+ }
+
+/* The page uses a grid layout.
+The columns in the grid are evenly sized.
+The margins on the side are: 8%
+The gaps between the grid cells are 20px vertically and 50px horizontally.
+The experience section should use a flexbox layout.
+Here are the following color styles:
+Blue: #00ADEE;
+Grey: #505355
+Background Color: rgba(192, 192, 192, 0.1); */
