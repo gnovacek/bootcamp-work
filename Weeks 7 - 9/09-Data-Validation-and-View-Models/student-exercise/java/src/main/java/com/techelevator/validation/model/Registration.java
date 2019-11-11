@@ -35,7 +35,7 @@ public class Registration {
 	private String confirmPassword;
 	
 	@NotNull(message="Birth date is Required")
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@DateTimeFormat(pattern="yyyy-mm-dd")
 	private LocalDate birthDate;
 	
 	@NotNull(message="Number of Tickets is Required")
@@ -106,16 +106,20 @@ public class Registration {
 		this.numOfTickets = numOfTickets;
 	}
 
-
-
 	public String getConfirmPassword() {
 		return confirmPassword;
 	}
 
-
-
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}
+
+	public void setEmailMatching(boolean emailMatching) {
+		this.emailMatching = emailMatching;
+	}
+
+	public void setPasswordMatching(boolean passwordMatching) {
+		this.passwordMatching = passwordMatching;
 	}
 	
 	

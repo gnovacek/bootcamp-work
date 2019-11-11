@@ -66,7 +66,12 @@ public class UserController {
 	// GET: /login
 	// Return the empty login view
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
-	public String getLoginPage() {
+	public String getLoginPage(Model modelHolder) {
+		
+		if(!modelHolder.containsAttribute("login")) {
+			modelHolder.addAttribute("login", new Login()); 
+		}
+		
 		return "login";
 	}
 	
