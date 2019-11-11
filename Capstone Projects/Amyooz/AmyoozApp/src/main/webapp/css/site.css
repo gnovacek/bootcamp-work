@@ -1,0 +1,19 @@
+body {
+    margin: 0 auto; 
+    padding: 50px; 
+}
+
+.main {
+    background-image: url(img/hannah-morgan-dnkM5wPjVdg-unsplash.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    
+}
+
+.jumbotron {
+    background-image: url(img/chris-lawton-vBA-JNHAraI-unsplash.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    font-weight: bold;
+}
