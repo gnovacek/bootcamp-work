@@ -6,8 +6,6 @@
 
 <h2>New User Registration</h2>
 
-<!-- when I took all of the form:label stuff out it worked, but then I don't think the whole program functions -->
-
 <c:url var="registrationUrl" value="/register"/>
 <form:form method="POST" action="${registrationUrl }" modelAttribute="registration">
 	
@@ -55,7 +53,7 @@
 	
 	<div>
 		<form:label path="birthDate"> Birthday </form:label>
-		<form:input path="birthDate" placeholder="birthdate yyyy/mm/dd"/>
+		<form:input path="birthDate" placeholder="birthdate yyyy-mm-dd"/>
 		<form:errors path="birthDate" cssClass="error"/>
 		<span style="color: red;" >*</span>	
 	</div><br>

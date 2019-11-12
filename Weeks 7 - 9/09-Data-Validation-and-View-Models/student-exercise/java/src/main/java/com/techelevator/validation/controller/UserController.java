@@ -46,8 +46,8 @@ public class UserController {
 			RedirectAttributes flash ) {
 		
 		if(result.hasErrors()) {
-			flash.addAttribute("registration", registerFormValues); 
-			flash.addAttribute(BindingResult.MODEL_KEY_PREFIX + "registration", result); 
+			flash.addFlashAttribute("registration", registerFormValues); 
+			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "registration", result); 
 			return "redirect:/register";
 		}
 		

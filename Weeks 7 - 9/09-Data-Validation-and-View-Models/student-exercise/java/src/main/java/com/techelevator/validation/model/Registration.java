@@ -35,13 +35,13 @@ public class Registration {
 	private String confirmPassword;
 	
 	@NotNull(message="Birth date is Required")
-	@DateTimeFormat(pattern="yyyy-mm-dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate birthDate;
 	
 	@NotNull(message="Number of Tickets is Required")
 	@Min(value=1, message="You must purchase at least 1 ticket")
 	@Max(value=10, message="You cannot purchase more than 10 tickets")
-	private Integer numOfTickets; 
+	private int numOfTickets; 
 	
 	private boolean emailMatching;
 	@AssertTrue(message="Emails must match")
@@ -60,9 +60,6 @@ public class Registration {
 		}
 		return true; 
 	}
-	
-	
-	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -93,31 +90,27 @@ public class Registration {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
 	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
-	public Integer getNumOfTickets() {
+	public int getNumOfTickets() {
 		return numOfTickets;
 	}
 	public void setNumOfTickets(Integer numOfTickets) {
 		this.numOfTickets = numOfTickets;
 	}
-
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
-
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
-
 	public void setEmailMatching(boolean emailMatching) {
 		this.emailMatching = emailMatching;
 	}
-
 	public void setPasswordMatching(boolean passwordMatching) {
 		this.passwordMatching = passwordMatching;
 	}
